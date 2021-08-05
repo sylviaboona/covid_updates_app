@@ -14,6 +14,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
+    background-color: black;
   }
 </style>
 
@@ -25,7 +26,7 @@
       {% csrf_token %}
 
       <select class='form-control' style='width:20%' name='selectedcountry'>
-        {% for country in mylist %}
+        {% for country in country_list %}
         <option>{{country}}</option>
         {% endfor %}
       </select>
@@ -33,7 +34,7 @@
       <input type='submit' class='btn btn-danger'>
       </form>
 
-      <h1 style='margin-top: 130px; color:white; text-align:center'>{{selectedcountry}}</h1>
+      <h1 style='margin-top: 130px; color:rgb(44, 43, 43); text-align:center'>{{selectedcountry}}</h1>
 
       <div class='d-flex justify-content-center align-items-center'>
         <div class='container' style=' border-radius: 10px; background-color: orange; height: 100px; width: 200px;'>
@@ -46,7 +47,7 @@
           <p style='text-align: center;color: white;'>Recovered cases</p>
         </div>
 
-        <div class='container' style='border-radius: 10px; background-color: yellow; height: 100px; width: 200px;'>
+        <div class='container' style='border-radius: 10px; background-color: rgb(197, 197, 7); height: 100px; width: 200px;'>
           <h1 style='text-align: center;color: white;'>{{active}}</h1>
           <p style='text-align: center;color: white;'>Active cases</p>
         </div>
